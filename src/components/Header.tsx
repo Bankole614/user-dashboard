@@ -9,8 +9,8 @@ const Header = ({toggleSidebar} : {toggleSidebar: () => void}) => {
 
 
   return (
-    <div className='bg-white border-b border-gray-100 px-4 flex justify-between py-3 gap-10 items-center'>
-      <div className='flex items-center gap-8'>
+    <div className='bg-white border-b border-gray-200 px-4 flex justify-between py-3 gap-10 items-center'>
+      <div className='flex  items-center gap-8'>
       <button className='lg:hidden text-black' onClick={toggleSidebar}>
         <RiMenu2Fill size={24} />
       </button>

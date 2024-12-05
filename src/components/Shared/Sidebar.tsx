@@ -15,37 +15,28 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
 
   return (
     <div className="flex h-screen fixed z-30 text-white">
-      <div className={`fixed inset-y-0 left-0 z-30 w-52 bg-white border-r border-gray-100 transition-transform duration-300 ease-in-out transform ${
+      <div className={`fixed inset-y-0 left-0 z-30 w-52 bg-white border-r border-gray-200 transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0 lg:static lg:inset-0`} >
-        <div className="h-full text-gray-300">
-          
-            <div className="flex items-center justify-center mt-4 mb-10 gap-2">
-              <IoCardOutline size={32} className="text-blue-600" />
-              <h1 className="text-2xl font-bold text-black">BankDash</h1>
-            </div>
-          
-
-          <div className="flex-1">
-            <div className="my-4">
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                  {DashboardLinks.map((item) => (
-                    <SidebarLinks
-                      key={item.key}
-                      item={{ ...item, icon: <item.icon size={22} /> }}
-                      toggleSidebar={toggleSidebar}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
+        <div className="h-full overflow-y-auto py-5 text-gray-300">
+          <div className="flex items-center justify-center mb-10 gap-2">
+            <IoCardOutline size={32} className="text-blue-600" />
+            <h1 className="text-2xl font-bold text-black">BankDash</h1>
+          </div>
+          <div className="flex flex-col  gap-2">
+            {DashboardLinks.map((item) => (
+              <SidebarLinks
+                key={item.key}
+                item={{ ...item, icon: <item.icon size={22} /> }}
+                toggleSidebar={toggleSidebar}
+              />
+            ))}
           </div>
         </div>
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 z-20 bg-black opacity-50 lg:hidden" onClick={toggleSidebar}></div>
+        <div className="fixed inset-0 z-10 bg-black/50 backdrop-blur-[1.5px] lg:hidden" onClick={toggleSidebar}></div>
       )}
     </div>
   );
@@ -67,7 +58,7 @@ function SidebarLinks({ item, toggleSidebar }: sideBarlinksprops) {
       to={item.path}
       className={classNames(
         pathname === item.path
-          ? " text-blue-600 border-l-4 border-blue-600 font-semibold"
+          ? " text-blue-600 border-l-[5px] border-blue-600 font-semibold"
           : "text-neutral-400",
         linkClass
       )}

@@ -21,7 +21,7 @@ const NotificationsPopover: React.FC = () => {
     <div>
       {/* Notification Icon Button */}
       <IconButton onClick={handleClick} aria-describedby={id} sx={{ bgcolor: '#f3f4f6'}}>
-        <LuBellDot className='text-red-400' />
+        <LuBellDot className='text-red-500' />
       </IconButton>
 
       {/* Popover */}
