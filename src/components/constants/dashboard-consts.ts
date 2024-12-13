@@ -1,7 +1,10 @@
-import React from "react";
+import { IconType } from "react-icons";
 import { LiaCreditCardSolid } from "react-icons/lia";
 import { SlPaypal } from "react-icons/sl";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
+import { FaSpotify } from "react-icons/fa";
+import { AiOutlineUser } from "react-icons/ai";
+import { VscTools } from "react-icons/vsc";
 
 
 export interface Card {
@@ -51,33 +54,82 @@ export const cards: Card[] = [
 
 export interface Transactions {
   id: number;
-  icon: React.ReactElement;
+  icon: IconType;
   title: string;
   date: string;
+  type: string;
+  status: string;
   amount: string;
+  cardNo: string;
+  transactionId: string;
 }
 
 export const transaction: Transactions[] = [
   {
     id: 1,
-    icon: React.createElement(LiaCreditCardSolid),
-    title: 'Deposit from card',
+    icon: LiaCreditCardSolid,
+    title: 'Withdrawal from card',
     date: '28 January 2024',
-    amount: '-$850'
+    type: 'Service',
+    status: 'Completed',
+    cardNo: '1234 **** **** 5678',
+    amount: '-$850',
+    transactionId: "#12548796",
   },
   {
     id: 2,
-    icon: React.createElement(SlPaypal),
+    icon: SlPaypal,
     title: 'Deposit Paypal',
+    type: 'Transfer',
+    status: 'Pending',
     date: '28 January 2024',
-    amount: '+$2500'
+    cardNo: '1234 **** **** 5678',
+    amount: '+$2500',
+    transactionId: "#12548796",
   },
   {
     id: 3,
-    icon: React.createElement(HiOutlineCurrencyDollar),
+    icon: HiOutlineCurrencyDollar,
     title: 'Jemi Wilson',
+    type: 'Transfer',
+    status: 'Completed',
     date: '28 January 2024',
-    amount: '-$5,400'
+    cardNo: '1234 **** **** 5678',
+    amount: '-$5,400',
+    transactionId: "#12548796",
+  },
+  {
+    id: 4,
+    icon: FaSpotify,
+    title: 'Spotify Subscription',
+    type: 'Service',
+    status: 'Pending',
+    date: '28 January 2024',
+    cardNo: '1234 **** **** 5678',
+    amount: '-$100',
+    transactionId: "#12548796",
+  },
+  {
+    id: 5,
+    icon: VscTools,
+    title: 'Mobile Service',
+    type: 'Service',
+    status: 'Completed',
+    date: '28 January 2024',
+    cardNo: '1234 **** **** 5678',
+    amount: '-$300',
+    transactionId: "#12548796",
+  },
+  {
+    id: 6,
+    icon: AiOutlineUser,
+    title: 'Emily Watson',
+    type: 'Transfer',
+    status: 'Completed',
+    date: '28 January 2024',
+    cardNo: '1234 **** **** 5678',
+    amount: '+$780',
+    transactionId: "#12548796",
   },
 ];
 

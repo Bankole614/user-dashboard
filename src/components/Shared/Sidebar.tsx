@@ -58,7 +58,7 @@ function SidebarLinks({ item, toggleSidebar }: sideBarlinksprops) {
       to={item.path}
       className={classNames(
         pathname === item.path
-          ? " text-blue-600 border-l-[5px] border-blue-600 font-semibold"
+          ? " text-blue-600 border-l-[5px] border-blue-600 bg-blue-50 font-semibold"
           : "text-neutral-400",
         linkClass
       )}

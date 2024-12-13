@@ -6,7 +6,7 @@ const QuickTransfer = () => {
   return (
     <div className="">
       <h2 className="text-neutral-600  text-lg font-semibold mb-2">Quick Transfer</h2>
-      <div className=" flex flex-col p-5 gap-4 justify-between h-72 bg-white rounded-xl">
+      <div className=" flex flex-col p-5 gap-4 justify-between h-72 bg-white rounded-2xl">
         <div className="flex  gap-8 overflow-x-auto no-scrollbar justify-between">
           {
             staff.map((staff) => (

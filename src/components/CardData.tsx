@@ -19,7 +19,7 @@ const CardData = ({ card }: { card: Card }) => {
   return (
     <div
       key={card.id}
-      className={`rounded-xl w-72 pt-4 text-white  ${getGradientClass(
+      className={`rounded-2xl w-[300px] pt-4 text-white  ${getGradientClass(
         card.id
       )} flex-shrink-0`}
     >

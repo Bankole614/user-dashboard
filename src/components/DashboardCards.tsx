@@ -25,7 +25,7 @@ const DashboardCards: React.FC<CardProps> = ({ cards }) => {
       <div className="flex justify-between  no-scrollbar  gap-4">
       {
       cards.slice(0, 3).map((card) => (
-      <CardData card={card} />
+      <CardData key={card.id} card={card} />
       ))}
       </div>
     </div>
