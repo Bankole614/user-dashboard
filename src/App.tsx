@@ -8,6 +8,7 @@ import { cards } from "./components/constants/dashboard-consts";
 import Investments from "./components/Investments";
 import Loans from "./components/Loans";
 import CardDetails from "./components/CardDetails";
+import Services from "./components/Services";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/investments" element={<Investments />} />
           <Route path="/loans" element={<Loans />} />
           <Route path="/credit-cards/:id" element={<CardDetails  />} />
+          <Route path="/services" element={<Services  />} />
         </Route>
       </Routes>
     </Router>

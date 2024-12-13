@@ -12,7 +12,7 @@ export const CardListList = () => {
               <th className="py-2 text-left   px-4">
               Bank
               </th>
-              <th className="py-2 text-left px-4">
+              <th className="py-2 min-w-28 text-left px-4">
                 Card Type
               </th>
               <th className="py-2 text-left px-4">
@@ -31,7 +31,7 @@ export const CardListList = () => {
               <tr
                 key={card.id}
                 style={{
-                  backgroundColor: card.id % 2 === 0 ? 'white' : '#f8f8f8',
+                  backgroundColor: card.id % 2 === 0 ? 'white' : '#f3f4f6',
                 }}
               >
                 

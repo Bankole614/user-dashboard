@@ -135,7 +135,7 @@ const CreditCards: React.FC<CardProps> = ({ cards }) => {
                   {errors.date && <p style={{ color: 'red' }}>{errors.date}</p>}
                 </div>
                 <div>
-                  <button className="w-fit bg-blue-600 px-4 py-1.5 text-white rounded-md">Add Card</button>
+                  <button className="sm:w-fit w-full bg-blue-600 px-4 py-1.5 text-white rounded-md">Add Card</button>
                 </div>
               </form>
 

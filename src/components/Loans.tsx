@@ -53,7 +53,7 @@ const Loans = () => {
                 {activeLoan.map((loan) => (
                   <tr
                     key={loan.id}
-                    className={`border-b last:border-b-0 ${loan.id % 2 === 0 ? "bg-gray-50" : ""}`}
+                    className={`border-b last:border-b-0 ${loan.id % 2 === 0 ? "bg-gray-100" : ""}`}
                   >
                     <td className="px-4 py-2">
                       {loan.number}

@@ -76,7 +76,7 @@ const CardDetails = () => {
                 </div>
 
                 <div>
-                  <label className="block font-medium text-gray-700">Phone Number</label>
+                  <label className="block font-medium text-gray-700">Bank Type</label>
                   <input
                     name="type"
                     value={form?.type}

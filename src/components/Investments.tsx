@@ -28,14 +28,14 @@ const Investments = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:gap-8 gap-4">
+      <div className="flex justify-between w-full gap-8 overflow-x-auto no-scrollbar">
         {
           investment.map((item) => (
-            <div key={item.id} className="flex items-center justify-center  gap-3 sm:gap-6 py-4 xl:px-8 px-2 bg-white rounded-2xl">
+            <div key={item.id} className="flex items-center justify-center w-full gap-3 sm:gap-6 py-4 xl:px-8 px-2 bg-white rounded-2xl">
               <div>
                 <p  className={`p-4 rounded-full ${colorClass(item.id)} `} >{<item.icon size={20} />}</p>
               </div>
-              <div>
+              <div className="min-w-44">
                 <p className="text-slate-400 ">{item.title}</p>
                 <p className="font-semibold text-xl">{item.amount}</p>
               </div>
@@ -102,7 +102,7 @@ const Investments = () => {
                 {stock.map((item) => (
                   <tr
                     key={item.id}
-                    className={`border-b last:border-b-0 ${item.id % 2 === 0 ? "bg-gray-50" : ""}`}
+                    className={`border-b last:border-b-0 ${item.id % 2 === 0 ? "bg-gray-100" : ""}`}
                   >
                     <td className="px-4 py-2 ">
                       {item.number}

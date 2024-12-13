@@ -49,7 +49,7 @@ const TransactionsTable: React.FC = () => {
     <div className=" mx-auto">
       <h2 className="text-neutral-600  text-lg font-semibold mb-2">Recent Transactions</h2>
 
-      {/* Filter Buttons */}
+      
       <div className="flex gap-4 border-b mb-4">
         <button
           onClick={() => {
@@ -110,7 +110,7 @@ const TransactionsTable: React.FC = () => {
             {currentTransactions.map((transaction) => (
               <tr
                 key={transaction.id}
-                className={`border-b last:border-b-0 ${transaction.id % 2 === 0 ? "bg-gray-50" : ""}`}
+                className={`border-b last:border-b-0 ${transaction.id % 2 === 0 ? "bg-gray-100" : ""}`}
               >
                 <td className="px-4 py-2 flex min-w-[230px] items-center gap-2">
                   <span className={`p-2 rounded-full ${colorClass(transaction.id)} `}><transaction.icon size={22} /></span>
