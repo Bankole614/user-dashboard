@@ -46,7 +46,6 @@ const Loans = () => {
                   <th className="px-4  py-2">Duration</th>
                   <th className="px-4 min-w-36 py-2">Interest Rate</th>
                   <th className="px-4 py-2">Installments</th>
-                  <th className="px-4  py-2">Repay</th>
                 </tr>
               </thead>
               <tbody>
@@ -63,11 +62,6 @@ const Loans = () => {
                     <td className='px-4 py-2'>{loan.duration}</td>
                     <td className="px-4 py-2">{loan.interest}</td>
                     <td className="px-4 min-w-36 py-2">{loan.installment} / month</td>
-                    <td className='px-4 py-2'>
-                      <button className="px-3 py-1 text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
-                      Repay
-                      </button>
-                    </td>
                   </tr>
                 ))}
               </tbody>

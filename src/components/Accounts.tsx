@@ -102,7 +102,7 @@ const Accounts: React.FC<CardProps> = ({ cards }) => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 items-center gap-4 grid-cols-1  mb-4">
+      <div className="grid lg:grid-cols-3 items-center gap-4 grid-cols-1">
         <div className="lg:col-span-2">
           <DebitCreditOverview />
         </div>

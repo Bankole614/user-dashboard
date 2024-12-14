@@ -51,7 +51,7 @@ const Investments = () => {
           <MonthlyInvestmentChart />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
         <div className="xl:col-span-2">
           <div className="flex flex-col">
             <h2 className="text-neutral-600 font-semibold text-lg mb-2">My Investment</h2>

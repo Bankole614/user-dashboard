@@ -9,7 +9,7 @@ export const CardListList = () => {
         <table className="w-full text-left">
           <thead className="text-slate-400 font-bold border-b">
             <tr>
-              <th className="py-2 text-left   px-4">
+              <th className="py-2 text-left px-4">
               Bank
               </th>
               <th className="py-2 min-w-28 text-left px-4">
@@ -49,7 +49,7 @@ export const CardListList = () => {
                 </td>
                 <td className="whitespace-nowrap px-4">
                 <Link to={`/credit-cards/${card.id}`}>
-                  <button className="px-3 py-1 text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600  hover:text-white transition-all duration-300">View Details</button>
+                  <button className="px-3 py-1 text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600  hover:text-white transition-all duration-[400ms]">View Details</button>
                 </Link>
                   
                 </td>

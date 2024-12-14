@@ -1,7 +1,8 @@
 import { IconType } from "react-icons";
-import { FaStarOfLife } from "react-icons/fa6";
+import { FaBriefcase, FaHandHoldingDollar, FaPiggyBank, FaStarOfLife } from "react-icons/fa6";
 import { GiShoppingBag } from "react-icons/gi";
 import { AiFillSafetyCertificate } from "react-icons/ai";
+import { LiaCreditCardSolid } from "react-icons/lia";
 
 
 export interface Services {
@@ -30,5 +31,45 @@ export const service: Services[] = [
     icon: AiFillSafetyCertificate,
     title: 'Safety',
     description: 'We are your allies'
+  },
+]
+
+export interface ServiceList {
+  id: number;
+  icon: IconType;
+  title: string;
+}
+
+
+export const serviceList: ServiceList[] = [
+  {
+    id: 1,
+    icon: FaHandHoldingDollar,
+    title: 'Business Loans',
+  },
+  {
+    id: 2,
+    icon: FaBriefcase,
+    title: 'Checking Accounts',
+  },
+  {
+    id: 3,
+    icon: FaPiggyBank,
+    title: 'Savings Account',
+  },
+  {
+    id: 4,
+    icon: LiaCreditCardSolid,
+    title: 'Credit Cards',
+  },
+  {
+    id: 5,
+    icon: LiaCreditCardSolid,
+    title: 'Debit Cards',
+  },
+  {
+    id: 6,
+    icon: FaStarOfLife,
+    title: 'life Insurance',
   },
 ]

@@ -35,7 +35,7 @@ const TransactionsTable: React.FC = () => {
       case 2:
         return "text-blue-500 bg-blue-100";
       case 3:
-        return "text-blue-500 bg-blue-100";
+        return "text-red-500 bg-red-100";
       case 4:
         return "text-green-400 bg-green-100";
       case 5:
@@ -103,7 +103,6 @@ const TransactionsTable: React.FC = () => {
               <th className="px-4  py-2">Card</th>
               <th className="px-4 py-2">Date</th>
               <th className="px-4 py-2">Amount</th>
-              <th className="px-4 py-2">Receipt</th>
             </tr>
           </thead>
           <tbody>
@@ -112,7 +111,7 @@ const TransactionsTable: React.FC = () => {
                 key={transaction.id}
                 className={`border-b last:border-b-0 ${transaction.id % 2 === 0 ? "bg-gray-100" : ""}`}
               >
-                <td className="px-4 py-2 flex min-w-[230px] items-center gap-2">
+                <td className="px-4 py-2 flex min-w-60 items-center gap-2">
                   <span className={`p-2 rounded-full ${colorClass(transaction.id)} `}><transaction.icon size={22} /></span>
                   {transaction.title}
                 </td>
@@ -127,23 +126,18 @@ const TransactionsTable: React.FC = () => {
                 >
                   {transaction.amount.startsWith('+') ? `${transaction.amount}` : transaction.amount}
                 </td>
-                <td className="px-4 py-2">
-                  <button className="px-3 py-1 text-blue-600 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">
-                    Download
-                  </button>
-                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      {/* Pagination */}
-      <div className="flex items-center justify-between my-4">
+      
+      <div className="flex items-center justify-between mt-4">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-3 py-1 text-gray-600 border rounded disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-1 text-gray-600 border border-slate-400 rounded disabled:opacity-30 disabled:cursor-not-allowed"
         >
           Previous
         </button>
@@ -153,7 +147,7 @@ const TransactionsTable: React.FC = () => {
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-3 py-1 text-gray-600 border rounded disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-1 text-gray-600 border border-slate-400 rounded disabled:opacity-30 disabled:cursor-not-allowed"
         >
           Next
         </button>
