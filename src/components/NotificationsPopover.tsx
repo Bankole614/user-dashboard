@@ -1,5 +1,5 @@
 import React, { useState, MouseEvent } from 'react';
-import { Popover, Typography, Avatar, List, ListItem, Divider, Button, Box, IconButton } from '@mui/material';
+import { Popover, Typography, List, ListItem, Divider, Button, Box, IconButton } from '@mui/material';
 import { LuBellDot } from "react-icons/lu";
 import { FaCheck, FaSpotify } from 'react-icons/fa6';
 import { IoWarningOutline } from 'react-icons/io5';
