@@ -24,7 +24,7 @@ const RecentTransactions = () => {
             <div className="flex items-center gap-2">
               <span className={`p-3 rounded-full ${colorClass(item.id)} `}>{<item.icon size={22} />}</span>
               <div className="flex flex-col">
-                <p className="text-base">{item.title}</p>
+                <p className="text-[15px]">{item.title}</p>
                 <p className="text-slate-400 text-sm">{item.date}</p>
               </div>
             </div>
