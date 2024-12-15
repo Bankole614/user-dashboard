@@ -117,7 +117,7 @@ const TransactionsTable: React.FC = () => {
                 </td>
                 <td className="px-4 min-w-36 py-2">{transaction.transactionId}</td>
                 <td className="px-4 py-2">{transaction.type}</td>
-                <td className="px-4 min-w-44 py-2">{transaction.cardNo}</td>
+                <td className="px-4 min-w-48 py-2">{transaction.cardNo}</td>
                 <td className="px-4 min-w-44 py-2">{transaction.date}</td>
                 <td
                   className={`px-4 py-2 font-medium ${
