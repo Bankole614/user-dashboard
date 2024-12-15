@@ -59,7 +59,7 @@ const Loans = () => {
                     </td>
                     <td className="px-4 py-2">{loan.loan}</td>
                     <td className="px-4 py-2">{loan.repay}</td>
-                    <td className='px-4 py-2'>{loan.duration}</td>
+                    <td className='px-4 min-w-28 py-2'>{loan.duration}</td>
                     <td className="px-4 py-2">{loan.interest}</td>
                     <td className="px-4 min-w-36 py-2">{loan.installment} / month</td>
                   </tr>

@@ -56,9 +56,9 @@ const TransactionsTable: React.FC = () => {
             setFilter("all");
             setCurrentPage(1);
           }}
-          className={` px-2 py-1 transition-all duration-300 font-medium ${
+          className={` px-2 py-1 transition-all duration-300 ${
             filter === "all"
-              ? "text-blue-600 border-b-[3px] border-blue-600 "
+              ? "text-blue-600 border-b-[3px] border-blue-600 font-semibold"
               : "text-slate-400  hover:text-blue-600"
           }`}
         >
@@ -69,9 +69,9 @@ const TransactionsTable: React.FC = () => {
             setFilter("income");
             setCurrentPage(1);
           }}
-          className={`px-2 py-1 transition-all duration-300 font-medium ${
+          className={`px-2 py-1 transition-all duration-300 ${
             filter === "income"
-              ? "text-blue-600 border-b-[3px] border-blue-600"
+              ? "text-blue-600 border-b-[3px] border-blue-600 font-semibold"
               : "text-slate-400  hover:text-blue-600"
           }`}
         >
@@ -82,9 +82,9 @@ const TransactionsTable: React.FC = () => {
             setFilter("expense");
             setCurrentPage(1);
           }}
-          className={`px-2 py-1 transition-all duration-300 font-medium ${
+          className={`px-2 py-1 transition-all duration-300 ${
             filter === "expense"
-              ? "text-blue-600 border-b-[3px] border-blue-600 "
+              ? "text-blue-600 border-b-[3px] border-blue-600 font-semibold"
               : "text-slate-400  hover:text-blue-600"
           }`}
         >

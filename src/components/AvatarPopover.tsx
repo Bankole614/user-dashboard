@@ -63,6 +63,7 @@ const AvatarPopover: React.FC = () => {
           }}} >
             Profile
           </Button>
+          
           <Button fullWidth variant="text" sx={{ color: 'white', justifyContent: 'flex-start', "&:hover" : {
             color: 'black', backgroundColor: 'white'
           }}}>

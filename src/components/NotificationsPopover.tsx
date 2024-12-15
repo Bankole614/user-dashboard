@@ -1,7 +1,9 @@
 import React, { useState, MouseEvent } from 'react';
 import { Popover, Typography, Avatar, List, ListItem, Divider, Button, Box, IconButton } from '@mui/material';
 import { LuBellDot } from "react-icons/lu";
-import { HiArrowDownRight } from 'react-icons/hi2';
+import { FaCheck, FaSpotify } from 'react-icons/fa6';
+import { IoWarningOutline } from 'react-icons/io5';
+import { LiaCreditCardSolid } from 'react-icons/lia';
 
 const NotificationsPopover: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -52,55 +54,60 @@ const NotificationsPopover: React.FC = () => {
 
         {/* Notification List */}
         <List>
-        <ListItem>
-            <Typography sx={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '14px', fontWeight: 'bold' }}>
-              <HiArrowDownRight />
-              Someone just checked in
+          <ListItem>
+            <Typography sx={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '14px' }}>
+              <FaCheck className='text-green-600 h-9 w-9 p-2 rounded-full bg-green-100' />
+              Password changed successfully
             </Typography>
-            </ListItem>
-          {/* Example Notification Item */}
-          <ListItem alignItems="flex-start">
-            
-            <Avatar sx={{ bgcolor: 'green', fontSize: '14px' }}>JJ</Avatar>
-            <Box ml={2}>
-              <Typography variant="body1" fontWeight="bold" sx={{ fontSize: '14px' }}>
-                Jacob Jones
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ fontSize: '12px' }}>
-                nevaeh.simmons@example.com
-              </Typography>
-              <Typography variant="caption" sx={{ fontSize: '12px', color: 'black' }}>
-                19 Oct. 2024 - 02:34 am
-              </Typography>
+          </ListItem>
 
-              <Box mt={1} p={1} sx={{ border: '1px solid #9ca3af', borderRadius: '8px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                <Button variant="contained" color="success" sx={{ mr: 1, textTransform: 'none', paddingX: '30px', fontSize: '12px' }}>
+          <Divider />
+
+          <ListItem>
+            <Typography sx={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '14px' }}>
+              <IoWarningOutline className='text-red-600 h-9 w-9 p-2 rounded-full bg-red-100' />
+              Transfer to John Doe failed
+            </Typography>
+          </ListItem>
+
+          <Divider  />
+          <ListItem >
+            <div className='w-full'>
+            <Typography sx={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '13px' }}>
+              <FaSpotify className='text-green-600 h-9 w-9 p-2 rounded-full bg-green-100 ' />
+              Spotify wants to charge your card
+            </Typography>
+
+            <div className='flex justify-center'>
+              <div className='flex border p-2 w-fit items-center justify-center rounded-lg mt-2 gap-2'>
+                <button className='text-white bg-green-700 rounded-md py-1 px-4 text-sm'>
                   Approve
-                </Button>
-                <Button variant="contained" color="error" sx={{ textTransform: 'none', paddingX: '30px', fontSize: '12px' }}>
+                </button>
+                <button className='text-white bg-red-700 rounded-md py-1 px-4 text-sm'>
                   Decline
-                </Button>
-              </Box>
-            </Box>
+                </button>
+              </div>
+            </div>
+
+            </div>
+              
+
+                          
           </ListItem>
 
-          <Divider sx={{ my: 2 }} />
+          <Divider  />
 
-          {/* Another example of a different notification */}
-          <ListItem alignItems="flex-start">
-            <Avatar sx={{ bgcolor: 'green', fontSize: '14px' }}>JJ</Avatar>
-            <Box ml={2}>
-              <Typography variant="body1" fontWeight="bold" sx={{ fontSize: '14px' }}>
-                A new User was successfully added
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ fontSize: '12px', color: 'black' }}>
-                19 Oct. 2024 - 02:34 am
-              </Typography>
-            </Box>
+          
+          <ListItem>
+            <Typography sx={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '14px' }}>
+              <LiaCreditCardSolid className='text-blue-600 h-9 w-9 p-2 rounded-full bg-blue-100' />
+              A new card was successfully added
+            </Typography>
           </ListItem>
+          <Divider  />
         </List>
 
-        <Divider />
+       
 
         {/* Footer with Clear all button */}
         <Box p={1}>

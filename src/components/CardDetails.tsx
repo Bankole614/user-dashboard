@@ -191,7 +191,7 @@ const CardDetails = () => {
                 >
                   Save changes
                 </button>
-                <button onClick={() => setIsDeleteModalOpen(true)} type="button" className="border px-4 py-2 rounded-lg hover:text-white hover:bg-blue-600 transition-all duration-300 active:bg-opacity-60">Delete</button>
+                <button onClick={() => setIsDeleteModalOpen(true)} type="button" className="border px-4 py-2 rounded-lg hover:text-white hover:bg-red-600 transition-all duration-300 active:bg-opacity-60">Delete</button>
               </div>
 
               
